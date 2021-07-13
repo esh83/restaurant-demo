@@ -18,6 +18,7 @@
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.2",
     "react-dom": "^17.0.2",
+    "react-dotenv": "^0.1.3",
     "react-icons": "^4.2.0",
     "react-leaflet": "^3.2.0",
     "react-redux": "^7.2.4",
@@ -33,8 +34,8 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-dotenv && react-scripts start",
+    "build": "react-dotenv && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -48,5 +49,11 @@
     ">0.2%",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "react-dotenv": {
+    "whitelist": [
+      "REACT_APP_SPACE",
+      "REACT_APP_ACCESS_TOKEN"
+    ]
+  }
 }
