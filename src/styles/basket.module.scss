@@ -1,0 +1,155 @@
+.basket {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 10;
+  cursor: pointer;
+  border: none !important;
+  background-color: transparent;
+  .basketIcon {
+    background-color: #ff9100;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &.active {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #14a301;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.basketBox {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  z-index: 9;
+  background-color: #ffffff;
+  padding: 15px;
+  padding-top: 30px;
+  width: 350px;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  &.dark{
+  background-color: #343A40;
+  color: white;
+
+  }
+@media only screen and (max-width : 768px) {
+    &{
+        width: 100%;
+    }
+}
+  .items {
+    height: 60%;
+    overflow-y: auto;
+    width: 100%;
+    margin: 20px 0;
+.emptyBasket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    .singleItem {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+      .delIcon {
+        background-color: transparent;
+        border: none;
+        i {
+          background-color: #db0000;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+      .foodInfo {
+        display: flex;
+        flex-direction: column;
+      
+        a {
+          color: #1492ff;
+          transition: color 0.2s;
+          margin-bottom: 5px;
+          &:hover {
+            color: #0083f5;
+          }
+        }
+      
+      }
+      .foodCount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+  .title {
+    h3 {
+      font-size: 24px;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+  .payBtn {
+    width: 100%;
+    button {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.overlay {
+  content: "";
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 8;
+}
+
