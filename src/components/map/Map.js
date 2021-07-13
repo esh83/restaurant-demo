@@ -73,7 +73,7 @@ function MapUser() {
           انتخاب مقصد
         </h3>
         <label>
-         آدرس تحویل فعلی : {address.city} ، خیابان {address.road}
+          آدرس تحویل فعلی : {address.city} ، خیابان {address.road}
         </label>
       </MapHeader>
       <MapContainer
@@ -85,7 +85,7 @@ function MapUser() {
       >
         <TileLayer
           attribution=""
-          url="https:maps.omniscale.net/v2/nc-restaurant-738743ee/style.grayscale/{z}/{x}/{y}.png "
+          url="https://maps.omniscale.net/v2/nc-restaurant-738743ee/style.grayscale/{z}/{x}/{y}.png"
         />
         {clickGps ? <LocationMarker /> : <DraggableMarker />}
 
