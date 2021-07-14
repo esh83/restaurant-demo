@@ -8,6 +8,7 @@ function NavbarHeader() {
   const themeMode = useSelector((state) => state.theme.mode);
   const dispath = useDispatch();
   const [expanded, setExpanded] = useState(false);
+  const [expandedDropDown, setExpandedDropdown] = useState(false);
   return (
     <div>
       <Navbar
@@ -29,25 +30,25 @@ function NavbarHeader() {
         />
         <Navbar.Collapse style={{ textAlign: "right", transition: ".3s" }}>
           <Nav className="ml-md-5 ml-3">
-            <NavDropdown title="دسته بندی" className="mr-3">
+            <NavDropdown title="دسته بندی" className="mr-3" show={expandedDropDown} onToggle={()=>setExpandedDropdown(!expandedDropDown)}>
               <NavLink
                 to="/foods/cat/kebab"
                 className="dropdown-item"
-                onClick={() => setExpanded(false)}
+                onClick={() => {setExpanded(false) ; setExpandedDropdown(false)}}
               >
                 کباب ها
               </NavLink>
               <NavLink
                 to="/foods/cat/fastfood"
                 className="dropdown-item"
-                onClick={() => setExpanded(false)}
+                onClick={() => {setExpanded(false) ; setExpandedDropdown(false)}}
               >
                 فست فود
               </NavLink>
               <NavLink
                 to="/foods/cat/soda"
                 className="dropdown-item"
-                onClick={() => setExpanded(false)}
+                onClick={() => {setExpanded(false) ; setExpandedDropdown(false)}}
               >
                 نوشیدنی
               </NavLink>
@@ -55,7 +56,7 @@ function NavbarHeader() {
               <NavLink
                 to="/foods/cat/all"
                 className="dropdown-item"
-                onClick={() => setExpanded(false)}
+                onClick={() => {setExpanded(false) ; setExpandedDropdown(false)}}
               >
                 همه غذا ها
               </NavLink>
