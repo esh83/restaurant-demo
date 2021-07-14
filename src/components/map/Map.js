@@ -82,6 +82,7 @@ function MapUser() {
         scrollWheelZoom={false}
         style={{ height: "450px", zIndex: 5, position: "relative" }}
         className="shadow rounded"
+        
       >
         <TileLayer
           attribution=""

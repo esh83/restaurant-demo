@@ -40,11 +40,20 @@ function LocationMarker() {
 
   useEffect(() => {
     map.locate().on("locationfound", function (e) {
+      map.dragging.disable();
+      map.doubleClickZoom.disable();
+      map.scrollWheelZoom.disable();
       setPosition(e.latlng);
       map.flyTo(e.latlng, map.getZoom());
       const radius = e.accuracy;
       const circle = L.circle(e.latlng, radius);
       circle.addTo(map);
+    });
+
+    map.on("moveend", function () {
+      map.dragging.enable();
+      map.doubleClickZoom.enable();
+      map.scrollWheelZoom.enable();
     });
   }, [map]);
 
