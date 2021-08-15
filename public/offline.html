@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>restaurant App</title>
+  
+    <style type="text/css">
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        margin: 0;
+        background: #0a1f44;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .city {
+        align-items: center;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 40px 8%;
+        border-radius: 20px;
+        background: #fff;
+      }
+      button{
+          outline: none;
+          border: none;
+          background-color:#000000 ;
+          color: #ffffff;
+          padding: 20px;
+          border-radius: 5px;
+          cursor: pointer;
+
+      }
+
+      .city-name {
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="city">
+      <h2 class="city-name">
+        <span>اتصال اینترنت خود را بررسی کنید</span>
+      </h2>
+      <button type="button">بارگذاری دوباره</button>
+    </div>
+
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        window.location.reload();
+      });
+    </script>
+  </body>
+</html>
