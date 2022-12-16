@@ -1,1 +1,1 @@
-restuarant demo with reactjs
+restaurant demo app using reactjs
